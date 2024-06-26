@@ -1,0 +1,17 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Japanese Language Learning App</title>
+</head>
+<body>
+<h1>Japanese Language Learning App</h1>
+<ul>
+{% for word in words %}
+<li>{{ word.word }} - <img src="{{ word.image_url }}" alt="{{ word.word }}"></li>
+{% endfor %}
+</ul>
+<a href="{{ url_for('new_word') }}">Add a new word</a>
+</body>
+</html>
+
